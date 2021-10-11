@@ -11,19 +11,14 @@ module.exports = class CarStorage {
 
   getById(id) {
     if (!id) throw new Error("parameter missing");
-    const found = [];
-
     for (let car of this.carStorage) {
       if (car.id === id) {
-        found.push(car);
+        return car;
       }
-    }
-    if (found.length > 0) {
-      return found;
-    } else {
-      return null;
-    }
+    }  
+    return null;
   }
+
 
   getAllIdsByManufacturer(value) {
     const found = [];

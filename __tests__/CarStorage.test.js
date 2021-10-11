@@ -21,7 +21,7 @@ describe("Testing getById", () => {
   const carStorage = new CarStorage(datastorage);
 
   test("get from default datastorage.json with parameter 2", () => {
-    const expextedResults = [
+    const expextedResults = 
       {
         id: 2,
         manufacturer: "Baas",
@@ -38,8 +38,7 @@ describe("Testing getById", () => {
             price: 200,
           },
         ],
-      },
-    ];
+      };
     expect(carStorage.getById(2)).toEqual(expextedResults);
   });
   test("parameter doesn't match any id", () => {
